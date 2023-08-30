@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+{% block title %}Delete confirmation{% endblock title %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div style='width:50%;margin:auto;'>
+<h2 style='marginbottom:10px;'>If you are Confirm then press the button</h2>
+    <form method='post'>
+        {% csrf_token %}
+        {{form}}
+        <button class='btn btn-info' type='submit'>Confirm</button>
+    </form>
+</div>
+{% endblock content %}
